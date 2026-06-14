@@ -1,0 +1,85 @@
+# =========================================================================
+# Maven Build Artifacts
+# =========================================================================
+target/
+**/target/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# =========================================================================
+# IDE Specific Files & Folders
+# =========================================================================
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+**/out/
+
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+*.launch
+*.factorypath
+
+# Visual Studio Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+
+# =========================================================================
+# Database Caches (Specific to your H2 Setup)
+# =========================================================================
+# If you configure H2 to write data to disk instead of purely in-memory
+*.mv.db
+*.trace.db
+local.db/
+
+# =========================================================================
+# Operating System & System Files
+# =========================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.lnk
+*.cab
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =========================================================================
+# Log Files
+# =========================================================================
+*.log
+logs/
+**/logs/
+
+# =========================================================================
+# Crash dumps / Dev Environment
+# =========================================================================
+*.hs_err_pid*
+*.replay

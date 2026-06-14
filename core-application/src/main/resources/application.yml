@@ -1,0 +1,14 @@
+spring:
+  # JPA configuration
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update # Automatically creates/updates H2 tables for you
+    show-sql: true     # Helps you learn by showing the SQL queries in the console
+
+  # Actuator configuration
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health,info,metrics

@@ -28,3 +28,41 @@ personal/
  ├── .gitignore               # Global repository ignore rules
  ├── pom.xml                  # Parent BOM (Dependency & Plugin Management)
  └── README.md                # Project documentation (this file)
+
+🗄️ Database Configuration
+This application uses H2 for rapid development and testing.
+
+Console Access: Once the application is running, access the H2 console at http://localhost:8080/h2-console.
+
+Persistence: Currently configured as an in-memory database. All data is volatile and will be cleared upon application restart.
+
+Schema Generation: The database schema is automatically generated from your Java Entities (@Entity) via Spring Data JPA.
+
+🛡️ Error Handling & Validation
+The application utilizes a GlobalExceptionHandler located in com.architecture.demo.exception. It provides consistent, standardized JSON error responses across the entire API.
+
+Sample Error Response (400 Bad Request)
+When validation fails (e.g., empty product name), the API returns:
+
+JSON
+{
+    "timestamp": "2026-06-14T18:15:26.0285245",
+    "status": 400,
+    "errors": {
+        "name": "Product name cannot be empty"
+    }
+}
+🚀 Running the Application
+Clone the repository:
+
+Bash
+git clone <your-repository-url>
+Build the project:
+
+Bash
+mvn clean install
+Run the core application:
+
+Bash
+cd core-application
+mvn spring-boot:run
